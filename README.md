@@ -1,4 +1,4 @@
-# this are my wsl\mac dotfiles for:
+# this are my wsl/mac dotfiles for:
 
 - zsh
 - neovim
