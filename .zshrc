@@ -109,6 +109,7 @@ source $ZSH/oh-my-zsh.sh
 alias c="clear"
 alias n="nvim"
 alias t="tmux"
+alias svim="sudo -E vim ." # alias for sudo vim in wsl
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
