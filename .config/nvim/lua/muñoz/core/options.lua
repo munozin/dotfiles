@@ -33,6 +33,10 @@ opt.splitbelow = true -- split horizontal window to the bottom
 -- turn off swapfile
 opt.swapfile = false
 
+-- persistent undotree with undo directory
+opt.undofile = true
+opt.undodir = os.getenv("HOME") .. "/.undodir"
+
 -- mac and wsl system clipboard
 opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 
