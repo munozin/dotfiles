@@ -21,11 +21,6 @@ opt.smartcase = true -- if you include mixed case in your search, assumes you wa
 -- cursor line
 opt.cursorline = true -- highlight the current cursor line
 
--- backspace
-opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
-
-opt.clipboard:append("unnamedplus") -- use system clipboard as default registe
-
 -- split windows
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
@@ -39,21 +34,6 @@ opt.undodir = os.getenv("HOME") .. "/.undodir"
 
 -- mac and wsl system clipboard
 opt.clipboard:append("unnamedplus") -- use system clipboard as default register
-
-if vim.fn.has("wsl") == 1 then
-	vim.g.clipboard = {
-		name = "WslClipboard",
-		copy = {
-			["+"] = "clip.exe",
-			["*"] = "clip.exe",
-		},
-		paste = {
-			["+"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-			["*"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-		},
-		cache_enabled = 0,
-	}
-end
 
 opt.scrolloff = 8 -- scroll page when cursor is 8 lines from top/bottom
 vim.opt.sidescrolloff = 8 -- scroll page when cursor is 8 spaces from left/right
