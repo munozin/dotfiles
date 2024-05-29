@@ -1,4 +1,4 @@
-# this are my wsl/mac dotfiles for:
+# dotfiles for:
 
 - zsh
 - neovim
@@ -8,5 +8,5 @@ and some snippets!
 
 ## todos:
 
-- improve readme 
+- improve readme
 - automate everything with a bash script
