@@ -18,7 +18,7 @@ return {
                     "tailwindcss",
                     "lua_ls",
                     "emmet_ls",
-                    "tsserver",
+                    "ts_ls",
                     "pyright",
                     "solargraph",
                 },
@@ -35,7 +35,7 @@ return {
             lspconfig.html.setup({})
             lspconfig.cssls.setup({})
             lspconfig.tailwindcss.setup({})
-            lspconfig.tsserver.setup({})
+            lspconfig.ts_ls.setup({})
             lspconfig.emmet_ls.setup({})
             lspconfig.pyright.setup({})
             lspconfig.solargraph.setup({})
