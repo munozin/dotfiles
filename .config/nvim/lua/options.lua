@@ -1,11 +1,15 @@
 local opt = vim.opt -- for conciseness
 
+-- hide .DS_Store file on mac
+vim.g.netrw_hide = 1 -- Enable hiding files
+vim.g.netrw_list_hide = [[^\.\(DS_Store\)$,\~$]]
+
 -- line numbers
 opt.relativenumber = true -- show relative line numbers
-opt.number = true -- shows absolute line number on cursor line (when relative number is on)
+opt.number = true         -- shows absolute line number on cursor line (when relative number is on)
 
 -- tabs & indentation
-opt.tabstop = 2 -- tab width
+opt.tabstop = 2    -- tab width
 opt.shiftwidth = 2 -- tab width on new line
 
 -- line wrapping
@@ -13,7 +17,7 @@ opt.wrap = false -- disable line wrapping
 
 -- search settings
 opt.ignorecase = true -- ignore case when searching
-opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
+opt.smartcase = true  -- if you include mixed case in your search, assumes you want case-sensitive
 
 -- cursor line
 opt.cursorline = true -- highlight the current cursor line
