@@ -5,11 +5,8 @@ opt.relativenumber = true -- show relative line numbers
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)
 
 -- tabs & indentation
-opt.title = true
-opt.tabstop = 4 -- spaces for tabs (prettier default)
-opt.shiftwidth = 4 -- spaces for indent width
-opt.expandtab = true -- expand tab to spaces
-opt.autoindent = true -- copy indent from current line when starting new one
+opt.tabstop = 2 -- tab width
+opt.shiftwidth = 2 -- tab width on new line
 
 -- line wrapping
 opt.wrap = false -- disable line wrapping
@@ -35,9 +32,13 @@ opt.undodir = os.getenv("HOME") .. "/.undodir"
 -- mac and wsl system clipboard
 opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 
-opt.scrolloff = 8 -- scroll page when cursor is 8 lines from top/bottom
-vim.opt.sidescrolloff = 8 -- scroll page when cursor is 8 spaces from left/right
+-- scroll page when cursor is 8 lines from top/bottom
+opt.scrolloff = 8
 
+-- scroll page when cursor is 8 spaces from left/right
+vim.opt.sidescrolloff = 8
+
+-- better terminal colors
 opt.termguicolors = true
 
 -- Highlight when yanking (copying) text
