@@ -6,6 +6,10 @@ local keymap = vim.keymap -- for conciseness
 -- set leader to space-bar
 keymap.set("n", "<leader><leader>", vim.cmd.Ex)
 
+-- auto-correct mistyped commands
+vim.cmd("command! W w")
+vim.cmd("command! Q q")
+
 -- quit faster with <leader>x
 vim.api.nvim_set_keymap("n", "<leader>x", "<cmd>:q<CR>", { noremap = true, silent = true })
 
@@ -30,7 +34,7 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
 
--- buffer next and buffer previous
+-- next buffer and previous buffer
 keymap.set("n", "<leader>k", vim.cmd.bn)
 keymap.set("n", "<leader>j", vim.cmd.bp)
 
