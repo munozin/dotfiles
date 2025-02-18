@@ -5,3 +5,6 @@ alacritty/
 zed/
 htop/
 mise/
+
+.luarc.json
+lazy-lock-json
