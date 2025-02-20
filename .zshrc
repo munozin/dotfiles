@@ -12,9 +12,6 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
 
 source $ZSH/oh-my-zsh.sh
 
-#word completion using TAB
-bindkey '^I' forward-word
-
 #custom aliases
 alias c="clear"
 alias n="nvim"
@@ -28,3 +25,4 @@ export VISUAL=vim
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 eval "$(~/.local/bin/mise activate zsh)"
 eval "$(zoxide init zsh)"
+source <(fzf --zsh)
