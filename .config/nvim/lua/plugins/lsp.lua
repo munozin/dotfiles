@@ -17,6 +17,10 @@ return {
 					"tailwindcss",
 					"lua_ls",
 					"ts_ls",
+					"clangd",
+					"gopls",
+					"ruff",
+					"ruby_lsp",
 				},
 			})
 		end,
@@ -32,6 +36,10 @@ return {
 			lspconfig.cssls.setup({})
 			lspconfig.tailwindcss.setup({})
 			lspconfig.ts_ls.setup({})
+			lspconfig.clangd.setup({})
+			lspconfig.gopls.setup({})
+			lspconfig.ruff.setup({})
+			lspconfig.ruby_lsp.setup({})
 
 			-- lsp keymaps
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
