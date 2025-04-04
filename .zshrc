@@ -5,14 +5,12 @@ else
     export PROMPT='%~ $'
 fi
 
-# enable colors
-export CLICOLOR=1
-
 #custom aliases
 alias c="clear"
 alias n="nvim"
 alias t="tmux"
-alias ll="ls -laG"
+alias ls="ls --color=auto"
+alias ll="ls -la --color=auto"
 
 #mise, zoxide and fzf
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
