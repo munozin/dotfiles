@@ -1,9 +1,5 @@
-# custom prompt depending on operating system
-if [[ "$OSTYPE" == *"darwin"* ]]; then
-    export PS1='%~ 🏴‍☠️$'
-else
-    export PROMPT='%~ $'
-fi
+#custom prompt
+export PROMPT='%~ $'
 
 #custom aliases
 alias c="clear"
