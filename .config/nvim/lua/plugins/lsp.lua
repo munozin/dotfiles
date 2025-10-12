@@ -29,15 +29,15 @@ return {
 		"neovim/nvim-lspconfig",
 		lazy = false,
 		config = function()
-			vim.lsp.config('lua_ls', {})
-			vim.lsp.config('html', {})
-			vim.lsp.config('cssls', {})
-			vim.lsp.config('tailwindcss', {})
-			vim.lsp.config('ts_ls', {})
-			vim.lsp.config('clangd', {})
-			vim.lsp.config('gopls', {})
-			vim.lsp.config('ruff', {})
-			vim.lsp.config('ruby_lsp', {})
+			vim.lsp.config("lua_ls", {})
+			vim.lsp.config("html", {})
+			vim.lsp.config("cssls", {})
+			vim.lsp.config("tailwindcss", {})
+			vim.lsp.config("ts_ls", {})
+			vim.lsp.config("clangd", {})
+			vim.lsp.config("gopls", {})
+			vim.lsp.config("ruff", {})
+			vim.lsp.config("ruby_lsp", {})
 
 			-- lsp keymaps
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
@@ -50,14 +50,16 @@ return {
 			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
 
 			-- format on write
-			vim.api.nvim_create_autocmd('LspAttach', {
+			vim.api.nvim_create_autocmd("LspAttach", {
 				callback = function(args)
 					local client = vim.lsp.get_client_by_id(args.data.client_id)
-					if not client then return end
+					if not client then
+						return
+					end
 
 					if client.supports_method("textDocument/formatting") then
 						-- Format the current buffer on save
-						vim.api.nvim_create_autocmd('BufWritePre', {
+						vim.api.nvim_create_autocmd("BufWritePre", {
 							buffer = args.buf,
 							callback = function()
 								vim.lsp.buf.format({ bufnr = args.buf, id = client.id })
@@ -67,6 +69,5 @@ return {
 				end,
 			})
 		end,
-
 	},
 }
