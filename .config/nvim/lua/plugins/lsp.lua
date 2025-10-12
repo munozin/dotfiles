@@ -29,17 +29,15 @@ return {
 		"neovim/nvim-lspconfig",
 		lazy = false,
 		config = function()
-			local lspconfig = require("lspconfig")
-
-			lspconfig.lua_ls.setup({})
-			lspconfig.html.setup({})
-			lspconfig.cssls.setup({})
-			lspconfig.tailwindcss.setup({})
-			lspconfig.ts_ls.setup({})
-			lspconfig.clangd.setup({})
-			lspconfig.gopls.setup({})
-			lspconfig.ruff.setup({})
-			lspconfig.ruby_lsp.setup({})
+			vim.lsp.config('lua_ls', {})
+			vim.lsp.config('html', {})
+			vim.lsp.config('cssls', {})
+			vim.lsp.config('tailwindcss', {})
+			vim.lsp.config('ts_ls', {})
+			vim.lsp.config('clangd', {})
+			vim.lsp.config('gopls', {})
+			vim.lsp.config('ruff', {})
+			vim.lsp.config('ruby_lsp', {})
 
 			-- lsp keymaps
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})

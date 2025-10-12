@@ -6,7 +6,12 @@ return {
 			-- configure treesitter
 			require("nvim-treesitter.configs").setup({
 				auto_install = true,
-				highlight = { enable = true },
+				highlight = {
+					enable = true,
+					inject = {
+						enable = true,
+					},
+				},
 			})
 		end,
 	},
